@@ -20,7 +20,6 @@ public class CalculatorTest
 	@Test
 	public void testGetTotal() 
 	{
-		fail("Not yet implemented");
 		//Test to make sure total is zero as default
 		Calculator newCalculator = new Calculator();
 		
@@ -30,7 +29,6 @@ public class CalculatorTest
 	@Test
 	public void testAddition() 
 	{
-		fail("Not yet implemented");
 		
 		//Test Addition Operations
 		Calculator newCalculator = new Calculator();
@@ -60,7 +58,6 @@ public class CalculatorTest
 	@Test
 	public void testSubtraction() 
 	{
-		fail("Not yet implemented");
 		
 		//Test Subtraction Operations
 		Calculator newCalculator = new Calculator();
@@ -91,7 +88,6 @@ public class CalculatorTest
 	@Test
 	public void testMultiplication() 
 	{
-		fail("Not yet implemented");
 		
 		//Test Multiplication Operations
 		Calculator newCalculator = new Calculator();
@@ -131,7 +127,6 @@ public class CalculatorTest
 	@Test
 	public void testDivision() 
 	{
-		fail("Not yet implemented");
 		
 		//Test Multiplication Operations
 		Calculator newCalculator = new Calculator();

@@ -9,7 +9,8 @@ package cse360assign3;
 * @version Feb 24 2016.
 */
 
-public class Calculator {
+public class Calculator
+{
 
 	//Private value that represents the current int value stored in the calculator for calculations. 
 	private int total;
@@ -18,7 +19,8 @@ public class Calculator {
 	 * Default constructor that creates a new calculator object with a default of 0 and an empty log String. 
 	 * 
 	 */
-	public Calculator () {
+	public Calculator () 
+	{
 		total = 0;  // not needed - included for clarity
 	}
 	
@@ -30,8 +32,9 @@ public class Calculator {
 	* This method returns the current total value stored in the calculator as an int.
 	* Defaults to 0 if no calculations have been performed
 	*/
-	public int getTotal () {
-		return 0;
+	public int getTotal ()
+	{
+		return total;
 	}
 	
 	/** public void add(int value)
@@ -40,8 +43,9 @@ public class Calculator {
 	* This performs the addition operation, adding the param to the stored total
 	* * Stores the resulting calculation back into total.
 	*/
-	public void add (int value) {
-		
+	public void add (int value) 
+	{
+		total = total + value;
 	}
 	
 	/** public void subtract(int value)
@@ -50,8 +54,9 @@ public class Calculator {
 	* This performs the subtraction operation, subtracting the param from the stored total
 	* * Stores the resulting calculation back into total.
 	*/
-	public void subtract (int value) {
-		
+	public void subtract (int value) 
+	{
+		total = total - value;
 	}
 	
 	/** public void multiply (int value)
@@ -60,8 +65,9 @@ public class Calculator {
 	* This performs the multiplication operation and multiplies the param with the stored total
 	* Stores the resulting calculation back into total. 
 	*/
-	public void multiply (int value) {
-		
+	public void multiply (int value)
+	{
+		total = total * value;
 	}
 	
 	/** public void divide (int value)
@@ -70,8 +76,17 @@ public class Calculator {
 	* This performs the integer division operation and divides the total by parameter value.
 	* Stores the resulting calculation back into total. 
 	*/
-	public void divide (int value) {
-		
+	public void divide (int value) 
+	{
+		//Check if divide by zero
+		if (value == 0)
+		{
+			total = 0;
+		}
+		else
+		{
+			total = total / value;
+		}
 	}
 	
 	/** public String getHistory ()
