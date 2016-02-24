@@ -161,7 +161,6 @@ public class CalculatorTest
 	@Test
 	public void testGetHistory() 
 	{
-		fail("Not yet implemented");
 		
 		//Test Multiplication Operations
 		Calculator newCalculator = new Calculator();
@@ -173,7 +172,11 @@ public class CalculatorTest
 		newCalculator.divide(10);
 		
 		assertEquals(4,newCalculator.getTotal());
-		assertEquals("+ 5 - 3 * 20 / 10",newCalculator.getHistory());
+		assertEquals("0 + 5 - 3 * 20 / 10",newCalculator.getHistory());
+		
+		newCalculator.divide(0);
+		assertEquals(0,newCalculator.getTotal());
+		assertEquals("0 + 5 - 3 * 20 / 10 / 0",newCalculator.getHistory());
 		
 		
 	}

@@ -15,6 +15,9 @@ public class Calculator
 	//Private value that represents the current int value stored in the calculator for calculations. 
 	private int total;
 	
+	//String Builder Object that stores the log of actions performed by this class
+	private StringBuilder historyLog = new StringBuilder();
+	
 	/**Calculator()
 	 * Default constructor that creates a new calculator object with a default of 0 and an empty log String. 
 	 * 
@@ -22,6 +25,8 @@ public class Calculator
 	public Calculator () 
 	{
 		total = 0;  // not needed - included for clarity
+		
+		historyLog.append("0"); //puts the starting value of the calculator into the log.
 	}
 	
 	/** public int getTotal()
@@ -46,6 +51,9 @@ public class Calculator
 	public void add (int value) 
 	{
 		total = total + value;
+		
+		//Update String Log
+		historyLog.append(" + " + value);
 	}
 	
 	/** public void subtract(int value)
@@ -57,6 +65,9 @@ public class Calculator
 	public void subtract (int value) 
 	{
 		total = total - value;
+		
+		//Update String Log
+		historyLog.append(" - " + value);
 	}
 	
 	/** public void multiply (int value)
@@ -68,6 +79,10 @@ public class Calculator
 	public void multiply (int value)
 	{
 		total = total * value;
+		
+		//Update String Log
+		historyLog.append(" * " + value);
+
 	}
 	
 	/** public void divide (int value)
@@ -87,6 +102,10 @@ public class Calculator
 		{
 			total = total / value;
 		}
+		
+		//Update String Log
+		historyLog.append(" / " + value);
+
 	}
 	
 	/** public String getHistory ()
@@ -97,7 +116,8 @@ public class Calculator
 		For example, if you subtract 5 then multiply by 2, this will return "- 5 * 2" and so on.
 		Additionally, for purposes of this class, dividing by zero will reset the total to zero instead of NaN.
 	*/
-	public String getHistory () {
-		return "";
+	public String getHistory () 
+	{
+		return historyLog.toString();
 	}
 }
